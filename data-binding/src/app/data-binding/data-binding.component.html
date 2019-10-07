@@ -11,5 +11,22 @@
         <img src="{{ urlImagem }}">
         <img [src]="urlImagem" >
     </article>
+    <article>
+        <h3>Class e style binding</h3>
+        <div>
+            selecione uma classe
+            <select #classe (change)=0>
+                <option value="alert-success">sucesso</option>
+                <option value="alert-info">info</option>
+                <option value="alert-warning">alerta</option>
+                <option value="alert-danger">Erro</option>
+            </select>
+            <br><br>
+            <div class="alert " role="alert"[class.alert-success]="classe.value =='alert-success'">Sucesso</div>
+            <div class="alert " role="alert">info</div>
+            <div class="alert " role="alert">alerta</div>
+            <div class="alert " role="alert">erro</div>
+        </div>
+    </article>
 
 </section>
