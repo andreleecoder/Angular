@@ -1,4 +1,6 @@
+
 <section class="property-binding">
+    <!--
     <article>
         <h3>interpolation / interpolação</h3>
         <p>string renderizada com interpolação:{{url}}</p>
@@ -22,10 +24,27 @@
                 <option value="alert-danger">Erro</option>
             </select>
             <br><br>
+
+            <div class="alert {{classe.value}}" role="alert">
+                texto colorido de acordo com a cor do combobox
+            </div>
+
             <div class="alert " role="alert"[class.alert-success]="classe.value =='alert-success'">Sucesso</div>
-            <div class="alert " role="alert">info</div>
-            <div class="alert " role="alert">alerta</div>
-            <div class="alert " role="alert">erro</div>
+            <div class="alert " role="alert"[class.alert-info]="classe.value =='alert-info'">info</div>
+            <div class="alert " role="alert"[class.alert-warning]="classe.value =='alert-warning'">alerta</div>
+            <div class="alert " role="alert"[class.alert-danger]="classe.value =='alert-danger'">erro</div>
+
+            <div class="alert-danger" role="alert"
+            [style.display]="classe.value=='alert-danger' ? 'block': 'none'">
+                Esse texto só aparece em caso de erro
+
+            </div>
+        </div>
+    </article>-->
+    <article>
+        <h3>Event binding</h3>
+        <div>
+        <button class="btn btn-primary">Me clique</button>
         </div>
     </article>
 
