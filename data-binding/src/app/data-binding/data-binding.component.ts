@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-data-binding',
@@ -13,6 +14,8 @@ export class DataBindingComponent implements OnInit {
   valorAtual:string='';
   valorSalvo
   isMouseOver:boolean=false
+
+  nome: string="abc"
 
   getValor(){
     return 1
