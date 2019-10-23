@@ -74,9 +74,16 @@
             [value]="nome"
             (input)="nome=$event.target.value">
 
-       
+            <input type="text" [(ngModel)]="nome">
+
+            <input type="text" bindon-ngModel="nome">
 
             <p>Voce digitou {{nome}}</p>
+        </div>
+        <div>
+            <input type="text" [(ngModel)]="pessoa.nome">
+            <input type="text" [(ngModel)]="pessoa.idade">
+            <p>Meu nome é {{pessoa.nome}} e eu tenho {{pessoa.idade}} anos de idade</p>
         </div>
     </article>
 </section>
