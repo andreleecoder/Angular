@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, DoCheck ,AfterContentInit, Input } from '@angular/core';
+import { Component, OnInit, OnChanges, DoCheck ,AfterContentInit, Input, OnDestroy } from '@angular/core';
 import { log } from 'util';
 
 @Component({
@@ -6,7 +6,7 @@ import { log } from 'util';
   templateUrl: './ciclo.component.html',
   styleUrls: ['./ciclo.component.css']
 })
-export class CicloComponent implements OnChanges, OnInit, DoCheck ,AfterContentInit  {
+export class CicloComponent implements OnChanges, OnInit, DoCheck ,AfterContentInit,OnDestroy  {
  @Input() valorInicial:number=10
   constructor() {
     this.log('constructor')
@@ -26,6 +26,9 @@ export class CicloComponent implements OnChanges, OnInit, DoCheck ,AfterContentI
   }
   ngAfterContentInit() {
     this.log('ngAfterContentInit')
+  }
+  ngOnDestroy(){
+    this.log('ngOnDestroy')
   }
   private log(hook:string){
     console.log(hook)

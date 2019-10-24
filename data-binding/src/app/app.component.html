@@ -1,1 +1,3 @@
-<app-ciclo></app-ciclo>
+<app-ciclo [valorInicial]="valor" *ngIf="!deletarCiclo"></app-ciclo>
+<button (click)="mudarValor()">mudar valor</button>
+<button (click)="destruirCiclo()">deletar</button>
